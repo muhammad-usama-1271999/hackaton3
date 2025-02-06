@@ -15,31 +15,31 @@ import Header from '@/components/layout/Header';
 const page = () => {
   return (
     <div className=''>
-        <Header text="blog" title="Our Blogs"/>
+        <Header />
 
       <div className='lg:flex gap-4 px-6 lg:px-48 mt-[100px] mb-[100px] justify-between'>
       <div className='lg:w-[600px] '>
         {dataBlog.map((blog)=>{
             return(
-                <div key={blog.id} className='flex flex-col gap-4 justify-center mb-[50px]'>
+                <div key={blog.id} className='flex flex-col gap-4 justify-center mb-[50px] px-3'>
                    <Image src={blog.image} alt='blogs' width={400} height={400} className='lg:w-[600px] lg:h-[450px] w-[300px] h-[250px]'/>
-                    <h1 className='flex gap-3 text-gray-600 '><BsCalendarMonth className='text-bordercoloryello text-2xl'/> Feb 14, 2022 /<GoCommentDiscussion className='text-bordercoloryello text-2xl'/>  3 / <PiUserCircleGear className='text-bordercoloryello text-2xl'/>Admin</h1>
-                    <h1 className='lg:text-[24px] text-[20px] font-bold font-helvetica text-blackkk'>{blog.title}</h1>
-                    <p className='lg:w-[550px] h-[170px] w-[300px] pt-[30px] font-medium text-[15px] text-blackkk]'>{blog.para}</p>
-                    <Link href={`/blog/${blog.id}`}><button className='border text-bordercoloryello lg:mt-0 mt-[30px] border-bordercoloryello w-[150px] h-[52px] p-3 rounded-[6px] flex gap-2 '><LuArrowUpFromLine className='text-xl text-bordercoloryello'/> Read more </button></Link>
+                    <h1 className='flex gap-3 text-gray-600 '><BsCalendarMonth className='text-[#ff9f0d] text-2xl'/> Feb 14, 2022 /<GoCommentDiscussion className='text-[#ff9f0d] text-2xl'/>  3 / <PiUserCircleGear className='text-[#ff9f0d] text-2xl'/>Admin</h1>
+                    <h1 className='lg:text-[24px] text-[20px] font-bold font-helvetica text-black'>{blog.title}</h1>
+                    <p className=' h-[170px] lg:w-96 pt-[30px] font-medium text-[15px] text-black]'>{blog.para}</p>
+                    <Link href={`/blog/${blog.id}`}><button className='border text-[#ff9f0d] mt-12 lg:mt-0 border-[#ff9f0d] w-[150px] h-[52px] p-3 rounded-[6px] flex gap-2 '><LuArrowUpFromLine className='text-xl text-[#ff9f0d]'/> Read more </button></Link>
                 </div>
             )
         })}
       </div>
 
-      <div className='w-[300px] h-fit '>
-      <div className="flex items-center gap-[10px] w-full h-[40px] border text-blackkk border-gray-500">
+      <div className=' h-fit '>
+      <div className="flex items-center gap-[10px] w-full h-[40px] border text-black border-gray-500">
             <input
               type="text"
               placeholder="Search..."
-              className="bg-transparent outline-none text-blackkk text-[14px] placeholder:text-whitetext w-full"
+              className="bg-transparent outline-none text-black text-[14px] placeholder:text-white w-full"
             />
-            <IoSearch className="text-whitetext w-[40px] h-[40px] bg-bordercoloryello p-2" />
+            <IoSearch className="text-white w-[40px] h-[40px] bg-[#ff9f0d] p-2" />
           </div>
 
           <section className="text-gray-600 border-[1px] body-font border-gray-400 mt-10 max-w-[400px] pb-[20px] mx-auto">
@@ -55,17 +55,17 @@ const page = () => {
             Prince Miyako
           </h2>
           <h1 className='text-gray-900 text-lg title-font font-medium mb-3'>Blogger/Photographer</h1>
-          <h1 className='flex gap-1 justify-center'><IoIosStar className='text-bordercoloryello'/><IoIosStar className='text-bordercoloryello'/><IoIosStar className='text-bordercoloryello'/><IoIosStar className='text-bordercoloryello'/><IoIosStar className='text-bordercoloryello'/> (1 Review)</h1>
+          <h1 className='flex gap-1 justify-center'><IoIosStar className='text-[#ff9f0d]'/><IoIosStar className='text-[#ff9f0d]'/><IoIosStar className='text-[#ff9f0d]'/><IoIosStar className='text-[#ff9f0d]'/><IoIosStar className='text-[#ff9f0d]'/> (1 Review)</h1>
           <p className="leading-relaxed text-base">
             Blue bottle crucifix vinyl post-ironic four dollar toast vegan
             taxidermy. Gastropub indxgo juice poutine, ramps microdosing banh mi
             pug VHS try-hard.
           </p>
-          <div className='flex gap-2 justify-center text-xl text-blackkk mt-1'>
-                <a href="https://pk.linkedin.com/in/ghaniya-khan-138919308"> <FaLinkedin /></a>
-                <a href="https://github.com/Ghaniya08"><IoLogoGithub  /></a>
-                <a href="https://instagram.com/ghaniya08">< FaInstagram/></a>
-                <a href="https://www.facebook.com/profile.php?id=61554662968933&mibextid=ZbWKwL"><FaFacebook /></a></div>
+          <div className='flex gap-2 justify-center text-xl text-black mt-1'>
+                <a href="#"> <FaLinkedin /></a>
+                <a href="#"><IoLogoGithub  /></a>
+                <a href="#">< FaInstagram/></a>
+                <a href="#"><FaFacebook /></a></div>
         </div>
       </div>
     </div>
@@ -284,11 +284,11 @@ const page = () => {
         
         <div className="border-[1px] border-gray-400 mt-10 px-[22px] py-4 max-w-[400px] mx-auto">
         <h1 className='text-2xl font-bold'>Follow us</h1>
-        <div className='flex gap-4 justify-center text-xl text-blackkk mt-1'>
-                <a href="https://pk.linkedin.com/in/ghaniya-khan-138919308"> <FaLinkedin /></a>
-                <a href="https://github.com/Ghaniya08"><IoLogoGithub  /></a>
-                <a href="https://instagram.com/ghaniya08">< FaInstagram/></a>
-                <a href="https://www.facebook.com/profile.php?id=61554662968933&mibextid=ZbWKwL"><FaFacebook /></a>
+        <div className='flex gap-4 justify-center text-xl text-black mt-1'>
+                <a href="#"> <FaLinkedin /></a>
+                <a href="#"><IoLogoGithub  /></a>
+                <a href="#">< FaInstagram/></a>
+                <a href="#"><FaFacebook /></a>
         </div>
 
         </div>

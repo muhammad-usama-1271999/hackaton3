@@ -30,7 +30,7 @@ const page = async () => {
 console.log(datas);
   return (
     <div>
-    <Header text="Chef" title="Our Chefs"/>
+    <Header />
     <div className='lg:px-[120px]'>
       <section className="text-gray-600 body-font">
 <div className="container px-5 py-10 mx-auto">
@@ -53,7 +53,7 @@ console.log(datas);
           </h2>
           <p className="mt-1 line-clamp-1 text-[14px]">{item.description}</p>
           <Link href={`/ourchef/${item._id}`}>
-<button  className="inline-flex text-white bg-bordercoloryello border-0 py-2 px-6 focus:outline-none rounded text-lg">View Detail</button>
+<button  className="inline-flex text-white bg-[#ff9f0d] border-0 py-2 px-6 focus:outline-none rounded text-lg">View Detail</button>
 
 </Link>        </div>
       </div>

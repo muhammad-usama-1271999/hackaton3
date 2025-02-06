@@ -3,32 +3,32 @@ import React from 'react';
 const OrderTracking = () => {
   return (
     <div className="min-h-screen">
-        <Header title='OrderTracking' text='tracking'/>
+        <Header />
       <div className="max-w-4xl mx-auto bg-white py-6 my-12 shadow-2xl rounded-lg p-6">
         <h1 className="text-gray-700 text-2xl font-semibold mb-6">Order Tracking</h1> 
         <div className="mb-8">
           <p className="text-gray-600">Order ID: <span className="font-medium">3354654654526</span></p>
           <p className="text-gray-600">Order date: <span className="font-medium">Feb 10, 2022</span></p>
-          <p className="text-gray-600">Estimated delivery: <span className="font-medium text-bordercoloryello"
+          <p className="text-gray-600">Estimated delivery: <span className="font-medium text-[#ff9f0d]"
           >May 10, 2022</span></p>
         </div>
         <div className="mb-6">
           <h2 className="text-gray-700 text-lg font-medium mb-4">Order Status</h2>
           <div className="flex space-x-4">
             <div className="text-center items-center flex flex-col">
-              <div className="bg-bordercoloryello
+              <div className="bg-[#ff9f0d]
                w-8 h-8 rounded-full text-white flex items-center justify-center text-center">✔</div>
               <p className="text-sm mt-2">Order Confirmed</p>
               <p className="text-xs text-gray-500">Wed, 11th Jan</p>
             </div>
             <div className="text-center items-center flex flex-col">
-              <div className="bg-bordercoloryello
+              <div className="bg-[#ff9f0d]
                w-8 h-8 rounded-full text-white flex items-center justify-center">✔</div>
               <p className="text-sm mt-2">Shipped</p>
               <p className="text-xs text-gray-500">Wed, 11th Jan</p>
             </div>
             <div className="text-center items-center flex flex-col">
-              <div className="bg-bordercoloryello
+              <div className="bg-[#ff9f0d]
                w-8 h-8 rounded-full text-white flex items-center justify-center">✔</div>
               <p className="text-sm mt-2">Out for Delivery</p>
               <p className="text-xs text-gray-500">Wed, 11th Jan</p>

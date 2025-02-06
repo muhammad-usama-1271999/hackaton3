@@ -13,7 +13,7 @@ import Header from "@/components/layout/Header";
 const page = () => {
   return (
     <div>
-      <Header title="Our Menu" text="Mneu"/>
+      <Header />
 
       <div className="flex flex-col items-center justify-center min-h-screen px-4 mt-12">
         <div className="flex flex-wrap justify-center gap-12">
@@ -24,13 +24,13 @@ const page = () => {
             
           <div className="space-y-6 max-w-xl">
          <div>
-         <BsCupHot className="text-bordercoloryello"/>
+         <BsCupHot className="text-[#ff9f0d]"/>
          <h1 className="text-[38px] font-bold ">Starter Menu</h1>
          </div>
             {menuData1.map((item, index) => (
               <div key={index} className="flex justify-between items-center border-b pb-4">
                 <div>
-                  <h1 className="font-bold text-lg text-blackkk hover:text-yellow-500">{item.title}</h1>
+                  <h1 className="font-bold text-lg text-black hover:text-yellow-500">{item.title}</h1>
                   <p className="text-gray-600 text-sm">{item.para}</p>
                   <h1 className="text-sm text-gray-500">{item.some}</h1>
                 </div>
@@ -48,13 +48,13 @@ const page = () => {
 
           <div className="space-y-6 max-w-xl">
           <div>
-          <BsCupHot className="text-bordercoloryello"/>
+          <BsCupHot className="text-[#ff9f0d]"/>
           <h1 className="text-[38px] font-bold ">Main Course</h1>
           </div>
             {menuData2.map((item, index) => (
               <div key={index} className="flex justify-between items-center border-b pb-4">
                 <div>
-                  <h1 className="font-bold text-lg text-blackkk hover:text-yellow-500">{item.title}</h1>
+                  <h1 className="font-bold text-lg text-black hover:text-yellow-500">{item.title}</h1>
                   <p className="text-gray-600 text-sm">{item.para}</p>
                   <h1 className="text-sm text-gray-500">{item.some}</h1>
                 </div>
@@ -79,13 +79,13 @@ const page = () => {
 
           <div className="space-y-6 max-w-xl">
             <div>
-            <BsCupHot className="text-bordercoloryello"/>
+            <BsCupHot className="text-[#ff9f0d]"/>
             <h1 className="text-[38px] font-bold ">Desert</h1>
             </div>
             {menuData3.map((item, index) => (
               <div key={index} className="flex justify-between items-center border-b pb-4">
                 <div>
-                  <h1 className="font-bold text-lg text-blackkk hover:text-yellow-500">{item.title}</h1>
+                  <h1 className="font-bold text-lg text-black hover:text-yellow-500">{item.title}</h1>
                   <p className="text-gray-600 text-sm">{item.para}</p>
                   <h1 className="text-sm text-gray-500">{item.some}</h1>
                 </div>
@@ -102,13 +102,13 @@ const page = () => {
 
           <div className="space-y-6 max-w-xl">
             <div>
-            <BsCupHot className="text-bordercoloryello"/>
+            <BsCupHot className="text-[#ff9f0d]"/>
             <h1 className="text-[38px] font-bold ">Drinks</h1>
             </div>
             {menuData3.map((item, index) => (
               <div key={index} className="flex justify-between items-center border-b pb-4">
                 <div>
-                  <h1 className="font-bold text-lg text-blackkk hover:text-yellow-500">{item.title}</h1>
+                  <h1 className="font-bold text-lg text-black hover:text-yellow-500">{item.title}</h1>
                   <p className="text-gray-600 text-sm">{item.para}</p>
                   <h1 className="text-sm text-gray-500">{item.some}</h1>
                 </div>

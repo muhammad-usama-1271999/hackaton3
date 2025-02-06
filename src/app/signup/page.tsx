@@ -27,17 +27,17 @@ export default function SignUpPage() {
             </ul>
           </nav>
           <div className="flex gap-4 ">
-          <h1><IoSearch className="text-whitetext text-[24px] cursor-pointer" /></h1>
-          <h1><Link href={"/signup"}><PiUserBold className="text-whitetext text-[24px] cursor-pointer" /></Link></h1>
-          <h1><Link href={"/shoppingcart"}><HiOutlineShoppingBag className="text-whitetext text-[24px] cursor-pointer" /></Link> </h1>
+          <h1><IoSearch className="text-white text-[24px] cursor-pointer" /></h1>
+          <h1><Link href={"/signup"}><PiUserBold className="text-white text-[24px] cursor-pointer" /></Link></h1>
+          <h1><Link href={"/shoppingcart"}><HiOutlineShoppingBag className="text-white text-[24px] cursor-pointer" /></Link> </h1>
           </div>
          <div className="lg:hidden block">
          <Sheet>
           <SheetTrigger>
-            <GiHamburgerMenu className="text-whitetext text-[24px] cursor-pointer" />
+            <GiHamburgerMenu className="text-white text-[24px] cursor-pointer" />
           </SheetTrigger>
           <SheetContent>
-            <ul className="flex flex-col gap-[10px] font-medium text-[16px] text-blackkk">
+            <ul className="flex flex-col gap-[10px] font-medium text-[16px] text-black">
             <li><Link href="/">Home</Link></li>
             <li><Link href="/ourmenu">Menu</Link></li>
             <li><Link href="/blog">Blog</Link></li>
@@ -78,7 +78,7 @@ export default function SignUpPage() {
               <h1 className="w-full border rounded px-3 py-2 focus:ring focus:ring-yellow-300 flex gap-2"><MdLockOutline  className="text-xl"/> Password</h1>
             </div>
             <div className="flex items-center mb-4">
-            <IoIosCheckbox className="text-bordercoloryello text-xl"/>
+            <IoIosCheckbox className="text-[#ff9f0d] text-xl"/>
               <span>Remember me?</span>
             </div>
             <button

@@ -20,58 +20,56 @@ interface BlogItem {
     img2?: string;
   }
 
-// interface Paramsin {
-//   params: {
-//       id : string
-//   }
-// }
+
 const page = ({params} :  { params: { id: string }}) => {
   const paramid = Number(params.id)
     const filterd : BlogItem | undefined = dataBlogListIndivi.find((item) => item.id === paramid )
   return (
-    <div className=''>
-         <Header text="blog detail" title="Blog Detail"/>
-      <div className='lg:flex gap-4 px-6 lg:px-48 mt-[100px] mb-[100px] justify-between'>
+    <div className='px-3'>
+         <Header />
+      <div className='lg:flex gap-4 px-6 lg:px-10 mt-[100px] mb-[100px] justify-center '>
       <div className='lg:w-[600px] '>
                 <div className='flex flex-col gap-4 justify-center mb-[50px]'>
                    <Image src={filterd?.image || "/fallback-image.jpg"} alt='blogs' width={400} height={400} className='lg:w-[600px] lg:h-[450px] w-[300px] h-[250px]'/>
-                    <h1 className='flex gap-3 text-gray-600 '><BsCalendarMonth className='text-bordercoloryello text-2xl'/> Feb 14, 2022 /<GoCommentDiscussion className='text-bordercoloryello text-2xl'/>  3 / <PiUserCircleGear className='text-bordercoloryello text-2xl'/>Admin</h1>
-                    <h1 className='lg:text-[24px] text-[20px] font-bold font-helvetica text-blackkk'>{filterd?.title}</h1>
-                    <p className='lg:w-[550px] h-[120px] w-[300px] pt-[30px] font-medium text-[15px] text-blackkk]'>{filterd?.para}</p>
-                    <p className='lg:w-[550px] h-[120px] w-[300px] pt-[30px] font-medium text-[15px] text-blackkk]'>{filterd?.para}</p>
-                    <p className='lg:w-[550px] h-[120px] w-[300px] pt-[30px] font-medium text-[15px] text-blackkk]'>{filterd?.para}</p>
+                    <h1 className='flex gap-3 text-gray-600 '><BsCalendarMonth className='text-[#ff9f0d] text-2xl'/> Feb 14, 2022 /<GoCommentDiscussion className='text-[#ff9f0d] text-2xl'/>  3 / <PiUserCircleGear className='text-[#ff9f0d] text-2xl'/>Admin</h1>
+                    <h1 className='lg:text-[24px] text-[20px] font-bold font-helvetica text-black'>{filterd?.title}</h1>
+                    <p className='lg:w-[550px] h-[120px] w-[300px] mt-7 font-medium text-[15px] text-black]'>{filterd?.para}</p>
+                    <p className='lg:w-[550px] h-[120px] w-[300px] mt-7 font-medium text-[15px] text-black]'>{filterd?.para}</p>
+                    <p className='lg:w-[550px] h-[120px] w-[300px] mt-7 font-medium text-[15px] text-black]'>{filterd?.para}</p>
 
                     <div className='lg:flex  gap-7 mt-[20px] lg:w-[580px] w-[300px]'>
                       <div>
                       <Image src={filterd?.img2|| "/fallback-image.jpg"} alt='blogs' width={100} height={100} className='lg:w-[400px] mt-[20px] lg:h-[200px]  w-[300px] h-[250px]'/>
                       </div>
                       <div className=''>
-                      <p className='lg:w-[300px] h-[120px] w-[300px] pt-[30px] font-medium text-[14px] text-blackkk]'>{filterd?.para}</p>
+                      <p className='lg:w-[300px] h-[120px] w-[300px] mt-7 font-medium text-[14px] text-black]'>{filterd?.para}</p>
                       </div>
                     </div>
                     
-                    <p className='lg:w-[550px] h-[120px] w-[300px] pt-[30px] font-medium text-[15px] text-blackkk]'>{filterd?.para}</p>
-                    <p className='lg:w-[550px] h-[120px] w-[300px] pt-[30px] font-medium text-[15px] text-blackkk]'>{filterd?.para}</p>
-                    <div className='border-[1px] lg:h-[40px] h-[55px] lg:mt-0 mt-[40px] lg:flex justify-between p-2 text-[13px] '>
+                    <p className='lg:w-[550px] h-[120px] w-[300px] mt-7 font-medium text-[15px] text-black]'>{filterd?.para}</p>
+                    <p className='lg:w-[550px] h-[120px] w-[300px] mt-7 font-medium text-[15px] text-black]'>{filterd?.para}</p>
+                    <div className='border-[1px] lg:h-[40px] h-[55px] lg:mt-0 mt-10 lg:flex justify-between p-2 text-[13px] '>
                       <div className='flex gap-3'>
                       <h1 className='font-bold'>Tags:</h1>
                       <h1 className='text-gray-600'>Resturant, Dinner, Pizza, Yummy.</h1>
                       </div>
-                      <h1 className='flex gap-3 text-gray-700'>Share: <a className="text-xl" href="https://pk.linkedin.com/in/ghaniya-khan-138919308" > <FaLinkedin /></a>
-                                <a className="text-xl" href="https://github.com/Ghaniya08"><IoLogoGithub  /></a>
-                                <a className="text-xl" href="https://instagram.com/ghaniya08">< FaInstagram/></a></h1>
+                      <h1 className='flex gap-3 text-gray-700 mt-5 mb-5'>Share: 
+                                <a className="text-xl" href="#" > <FaLinkedin /></a>
+                                <a className="text-xl" href="#"><IoLogoGithub  /></a>
+                                <a className="text-xl" href="#">< FaInstagram/></a>
+                      </h1>
                     </div>
                     <CommentSection/>
                 </div>
       </div>
       <div className='w-[300px] h-fit '>
-      <div className="flex items-center gap-[10px] w-full h-[40px] border text-blackkk border-gray-500">
+      <div className="flex items-center gap-[10px] w-full h-[40px] border text-black border-gray-500">
             <input
               type="text"
               placeholder="Search..."
-              className="bg-transparent outline-none text-blackkk text-[14px] placeholder:text-whitetext w-full"
+              className="bg-transparent outline-none text-black text-[14px] placeholder:text-white w-full"
             />
-            <IoSearch className="text-whitetext w-[40px] h-[40px] bg-bordercoloryello p-2" />
+            <IoSearch className="text-white w-[40px] h-[40px] bg-[#ff9f0d] p-2" />
           </div>
 
           <section className="text-gray-600 border-[1px] body-font border-gray-400 mt-10 max-w-[400px] pb-[20px] mx-auto">
@@ -87,17 +85,17 @@ const page = ({params} :  { params: { id: string }}) => {
             Prince Miyako
           </h2>
           <h1 className='text-gray-900 text-lg title-font font-medium mb-3'>Blogger/Photographer</h1>
-          <h1 className='flex gap-1 justify-center'><IoIosStar className='text-bordercoloryello'/><IoIosStar className='text-bordercoloryello'/><IoIosStar className='text-bordercoloryello'/><IoIosStar className='text-bordercoloryello'/><IoIosStar className='text-bordercoloryello'/> (1 Review)</h1>
+          <h1 className='flex gap-1 justify-center'><IoIosStar className='text-[#ff9f0d]'/><IoIosStar className='text-[#ff9f0d]'/><IoIosStar className='text-[#ff9f0d]'/><IoIosStar className='text-[#ff9f0d]'/><IoIosStar className='text-[#ff9f0d]'/> (1 Review)</h1>
           <p className="leading-relaxed text-base">
             Blue bottle crucifix vinyl post-ironic four dollar toast vegan
             taxidermy. Gastropub indxgo juice poutine, ramps microdosing banh mi
             pug VHS try-hard.
           </p>
-          <div className='flex gap-2 justify-center text-xl text-blackkk mt-1'>
-                <a href="https://pk.linkedin.com/in/ghaniya-khan-138919308"> <FaLinkedin /></a>
-                <a href="https://github.com/Ghaniya08"><IoLogoGithub  /></a>
-                <a href="https://instagram.com/ghaniya08">< FaInstagram/></a>
-                <a href="https://www.facebook.com/profile.php?id=61554662968933&mibextid=ZbWKwL"><FaFacebook /></a></div>
+          <div className='flex gap-2 justify-center text-xl text-black mt-1'>
+                <a href="#"> <FaLinkedin /></a>
+                <a href="#"><IoLogoGithub  /></a>
+                <a href="#">< FaInstagram/></a>
+                <a href="#"><FaFacebook /></a></div>
         </div>
       </div>
     </div>
@@ -302,11 +300,11 @@ const page = ({params} :  { params: { id: string }}) => {
         </div>
         <div className="border-[1px] border-gray-400 mt-10 px-[22px] py-4 max-w-[400px] mx-auto">
         <h1 className='text-2xl font-bold'>Follow us</h1>
-        <div className='flex gap-4 justify-center text-xl text-blackkk mt-1'>
-                <a href="https://pk.linkedin.com/in/ghaniya-khan-138919308"> <FaLinkedin /></a>
-                <a href="https://github.com/Ghaniya08"><IoLogoGithub  /></a>
-                <a href="https://instagram.com/ghaniya08">< FaInstagram/></a>
-                <a href="https://www.facebook.com/profile.php?id=61554662968933&mibextid=ZbWKwL"><FaFacebook /></a>
+        <div className='flex gap-4 justify-center text-xl text-black mt-1'>
+                <a href="#"> <FaLinkedin /></a>
+                <a href="#"><IoLogoGithub  /></a>
+                <a href="#">< FaInstagram/></a>
+                <a href="#"><FaFacebook /></a>
         </div>
 
         </div>

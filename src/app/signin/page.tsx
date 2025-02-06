@@ -7,7 +7,7 @@ import Header from "@/components/layout/Header";
 export default function SignInPage() {
   return (
     <div className="min-h-screen bg-white">
-      <Header title="Sign In" text="signin"/>
+      <Header />
       <section className="py-16">
         <div className="container mx-auto max-w-md bg-white shadow-lg rounded-md p-8">
           <h3 className="text-2xl font-bold mb-6 ">Sign In</h3>
@@ -20,7 +20,7 @@ export default function SignInPage() {
               <h1 className="w-full border rounded px-3 py-2 focus:ring focus:ring-yellow-300 flex gap-2"><MdLockOutline  className="text-xl"/> Password</h1>
             </div>
             <div className="flex items-center mb-4">
-            <IoIosCheckbox className="text-bordercoloryello text-xl"/>
+            <IoIosCheckbox className="text-[#ff9f0d] text-xl"/>
               <span>Remember me?</span>
             </div>
             <button

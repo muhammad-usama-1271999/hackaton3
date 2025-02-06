@@ -22,7 +22,7 @@ const page = async ({ params }: { params: { id: string } }) => {
 
   return (
     <div>
-      <Header title="Chef Detail" text="chef detail" />
+      <Header  />
       <section className="text-black body-font">
         <div className="container mx-auto flex px-5 pb-24 pt-10 items-center justify-center flex-col">
         <h2 className="text-[30px] pb-4 text-black font-extrabold">{chef.position}</h2>
@@ -46,12 +46,12 @@ const page = async ({ params }: { params: { id: string } }) => {
 
             <div className="flex justify-center mt-8">
             <a href="https://pk.linkedin.com/in/ghaniya-khan-138919308">
-            <button className="inline-flex text-white bg-bordercoloryello border-0 py-2 px-6 focus:outline-none rounded text-lg">
+            <button className="inline-flex text-white bg-[#ff9f0d] border-0 py-2 px-6 focus:outline-none rounded text-lg">
                 Contact Chef
               </button>
             </a>
               <Link href={"/ourchef"}>
-              <button className="ml-4 inline-flex text-white bg-bordercoloryello border-0 py-2 px-6 focus:outline-none rounded text-lg">
+              <button className="ml-4 inline-flex text-white bg-[#ff9f0d] border-0 py-2 px-6 focus:outline-none rounded text-lg">
                 Back to List
               </button>
               </Link>

@@ -8,10 +8,10 @@ import { GoDotFill } from "react-icons/go";
 const Testi = () => {
   return (
     <div className="px-[20px] md:px-[50px] lg:px-[100px] mt-[50px] md:mt-[80px] lg:mt-[100px]">
-      <h1 className="text-bordercoloryello font-greatVibes text-[24px] md:text-[28px] lg:text-[32px] leading-[30px] md:leading-[36px] lg:leading-[40px] font-medium">
+      <h1 className="text-[#ff9f0d] font-greatVibes text-[24px] md:text-[28px] lg:text-[32px] leading-[30px] md:leading-[36px] lg:leading-[40px] font-medium">
         Testimonials
       </h1>
-      <h1 className="font-helvetica font-bold text-[24px] md:text-[32px] lg:text-[40px] leading-[30px] md:leading-[38px] lg:leading-[45px] text-whitetext">
+      <h1 className="font-helvetica font-bold text-[24px] md:text-[32px] lg:text-[40px] leading-[30px] md:leading-[38px] lg:leading-[45px] text-white">
         What our client are saying
       </h1>
       <div className="px-[10px] md:px-[50px] lg:px-[100px] flex flex-col items-center">
@@ -20,7 +20,7 @@ const Testi = () => {
             <Image src={client} alt="client pic" className="object-cover" />
           </div>
           <div className="mt-6">
-            <PiQuotesLight className="text-bordercoloryello text-[36px] md:text-[42px] lg:text-[48px]" />
+            <PiQuotesLight className="text-[#ff9f0d] text-[36px] md:text-[42px] lg:text-[48px]" />
           </div>
           <p className="mt-4 text-sm md:text-base lg:text-lg text-gray-600 text-center w-full max-w-[500px] md:max-w-[600px] lg:max-w-[696px] leading-[22px] md:leading-[24px] lg:leading-[26px] font-medium">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque diam
@@ -29,10 +29,10 @@ const Testi = () => {
             sed vitae mus risus. Lacus nisi, et ac dapibus sit eu velit in consequat.
           </p>
           <div className="flex text-lg md:text-xl lg:text-2xl mt-[10px]">
-            <MdStar className="text-bordercoloryello" />
-            <MdStar className="text-bordercoloryello" />
-            <MdStar className="text-bordercoloryello" />
-            <MdStar className="text-bordercoloryello" />
+            <MdStar className="text-[#ff9f0d]" />
+            <MdStar className="text-[#ff9f0d]" />
+            <MdStar className="text-[#ff9f0d]" />
+            <MdStar className="text-[#ff9f0d]" />
             <MdStar className="text-gray-400" />
           </div>
           <h2 className="mt-6 text-[18px] md:text-[20px] lg:text-[24px] font-bold text-gray-800">
@@ -41,10 +41,10 @@ const Testi = () => {
           <p className="text-gray-500 text-sm md:text-base">Food Specialist</p>
         </div>
         <div className="text-sm md:text-base lg:text-xl flex mt-[10px] md:mt-[15px] lg:mt-[20px]">
-          <GoDotFill className="text-bordercoloryello" />
-          <GoDotFill className="text-bordercoloryello/30" />
-          <GoDotFill className="text-bordercoloryello/30" />
-          <GoDotFill className="text-bordercoloryello/30" />
+          <GoDotFill className="text-[#ff9f0d]" />
+          <GoDotFill className="text-[#ff9f0d]/30" />
+          <GoDotFill className="text-[#ff9f0d]/30" />
+          <GoDotFill className="text-[#ff9f0d]/30" />
         </div>
       </div>
     </div>

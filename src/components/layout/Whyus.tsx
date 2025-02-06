@@ -13,33 +13,107 @@ import React from 'react'
 const Whyus = () => {
   return (
     
-    <div className='w-full lg:h-[716px] flex mt-[100px] lg:px-[100px] overflow-hidden px-[20px]'>
-    <div className='xl:block md:hidden sm:hidden hidden lg:hidden'>
-    <div className='grid grid-cols-2 grid-row-2 '>
-        <Image src={whyus1} alt='' className='w-[262px] h-[256px] rounded-[6px]' />    
-        <Image src={whyus2} alt='' className='w-[201px] ml-[-60px] h-[181px] rounded-[6px] mt-[75px]'/>    
-        <Image src={whyus4} alt='' className='w-[144px] h-[206px] rounded-[6px] mt-[15px]'/>    
-        <Image src={whyus5} alt='' className='w-[141px] h-[146px] ml-[-180px] mt-[15px] rounded-[6px]'/>    
-        <Image src={whyus6} alt='' className='w-[101px] h-[106px] rounded-[6px] ml-[300px] mt-[-205px]'/>    
-        <Image src={whyus7} alt='' className='w-[101px] h-[106px] rounded-[6px] ml-[-30px] mt-[-90px]'/>    
-      </div>
-    </div>
+     
+
     
-      <div className='flex flex-col  lg:gap-[90px] '>
-     <div className='flex flex-col justify-between  lg:gap-[20px]'>
-     <h1 className='text-bordercoloryello font-greatVibes text-[32px] leading-[40px] font-medium'>Why Choose us</h1>
-        <h1 className='font-helvetica w-[400px] font-bold lg:text-[40px] text-[30px] leading-[45px] text-whitetext'><span className='text-bordercoloryello'>Ex</span>ta ordinary taste And Experienced</h1>
-        <p className='font-normal lg:text-[16px]  text-[13px] leading-6 text-whitetext w-[280px] lg:w-[480px] lg:h-[48px]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque diam pellentesque bibendum non dui volutpat fringilla bibendum. Urna, elit augue urna, vitae feugiat pretium donec id elementum. Ultrices mattis sed vitae mus risus. Lacus nisi, et ac dapibus sit eu velit in consequat.</p>
-     </div>
-        <div className='lg:w-[374px] text-xs lg:h-[135px] h-[90px] flex lg:gap-[20px] gap-3'>
-          <h1 className='text-whitetext text-center font-medium'><PiHamburgerLight className=' lg:w-[102px] lg:h-[100px] h-10 w-10 rounded-[6px] bg-bordercoloryello text-whitetext text-center'/>Fast Food</h1>
-          <h1 className='text-whitetext text-center font-medium'>< PiCookieLight className=' lg:w-[102px] lg:h-[100px] h-10 w-10 rounded-[6px] bg-bordercoloryello text-whitetext text-center'/>Lunch</h1>
-          <h1 className='text-whitetext text-center font-medium'><GiWineGlass className='text-xs lg:w-[102px] w-10 lg:h-[100px] h-10 rounded-[6px] bg-bordercoloryello text-whitetext text-center'/>Dinner</h1>
+    <div className="flex justify-center gap-2 flex-wrap mt-24"> 
+      
+      <div className="mx-3 hidden lg:grid">
+        <div className="flex items-end gap-3 mb-3">
+          <div>
+            <Image src={whyus1} alt="some food" className="w-[300px] h-[300px] rounded-[6px]"/>
+          </div>
+          <div>
+            <Image src={whyus2} alt="some food" className="w-[240px] h-[210px] rounded-[6px]"/>
+          </div>
+        </div>
+        <div className="flex gap-3">
+          <div>
+            <Image src={whyus7} alt="some food" className="w-[210px] h-[360px] rounded-[6px]"/>
+          </div>
+          <div>
+            <Image  src={whyus5} alt="some food" className="w-[180px] h-[180px] rounded-[6px]"/>
+          </div>
+          <div className="grid -gap-3">
+            <div>
+              <Image src={whyus4} alt="some food" className="w-[130px] h-[130px] rounded"/>
+            </div>
+            <div>
+              <Image src={whyus6} alt="some food" className="w-[130px] h-[130px] rounded"/>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div className="lg:w-[526px] w-[300px]">
+        <div className="">
+          <h2 className="font-[helvetica] lg:text-3xl text-xl text-[#FF9F0D]">why Choose us</h2>
+        </div>
+        <div className="mt-4">
+          <h1 className="font-[helvetica] font-bold lg:text-5xl text-3xl text-[#FF9F0D]">Ex
+            <span className=" text-[#FFffff]">tra ordinary taste And Experienced</span> </h1>
+        </div>
+        <div className="mx-3 lg:hidden">
+        <div className="flex items-end gap-3 mb-3">
+          <div>
+            <Image src={whyus1} alt="some food" className="w-[362px] h-[356px] rounded-[6px]"/>
+          </div>
+          <div>
+            <Image src={whyus2} alt="some food" className="w-[281px] h-[231px] rounded-[6px]"/>
+          </div>
+        </div>
+        <div className="flex gap-3">
+          <div>
+            <Image src={whyus7} alt="some food" className="w-[244px] h-[306px] rounded-[6px]"/>
+          </div>
+          <div>
+            <Image  src={whyus5} alt="some food" className="w-[221px] h-[226px] rounded-[6px]"/>
+          </div>
+          <div className="grid gap-3">
+            <div>
+              <Image src={whyus4} alt="some food" className="w-[161px] h-[168px] rounded"/>
+            </div>
+            <div>
+              <Image src={whyus6} alt="some food" className="w-[161px] h-[166px] rounded"/>
+            </div>
+          </div>
+        </div>
+      </div>
+        <div className="mt-9">
+          <p className="font-[inter] lg:text-base text-xs text-[#ffffff]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque diam pellentesque bibendum non dui
+            volutpat fringilla bibendum. Urna, elit augue urna, vitae feugiat pretium donec id elementum. Ultrices 
+            mattis sed vitae mus risus. Lacus nisi, et ac dapibus sit eu velit in consequat.</p>
+        </div>
+        <div className="flex justify-around mt-6">
+          <div className="">
+            <PiHamburgerLight className='w-[58px] h-[58px] rounded-[6px] bg-[#FF9F0D] lg:p-3 p-2'/>
+            <h3 className=" text-[#ffffff] font-[inter] lg:text-xl text-sm p-2">Fast Food</h3>
+          </div>
+          <div className="">
+          <PiCookieLight className=' w-[58px] h-[58px] rounded-[6px] bg-[#FF9F0D] lg:p-3 p-2'/>
+            <h3 className=" text-[#ffffff] font-[inter] lg:text-xl text-sm p-2">Lunch</h3>
+          </div>
+          <div className="">
+          <GiWineGlass className='w-[58px]  h-[58px] rounded-[6px] bg-[#FF9F0D] lg:p-3 p-2'/>
+            <h3 className=" text-[#ffffff] font-[inter] lg:text-xl text-sm p-2">Dinner</h3>
+          </div>
+        </div>
+        <div className="">
+          <div className="flex justify-around lg:w-[374px] w-[200px] border-l-8 border-[#ff9f0d] bg-[#ffffff] rounded-md p-4 mx-auto">
+            <div className="">
+              <h3 className="font-[helvetica] lg:text-5xl text-2xl font-bold text-[#FF9F0D]">30+</h3>
+            </div>
+            <div className="">
+              <p className="font-[inter] lg:text-xl text-sm text-[#1E1E1E]">Years of</p>
+              <h5 className=" lg:text-2xl text-base font-bold text-[#1E1E1E]">Experienced</h5>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+
     
-  )
-}
+    
+)}
 
 export default Whyus

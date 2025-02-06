@@ -28,13 +28,13 @@ const Page = async ({ params }: { params: { id: string } }) => {
       }`
     );
     const relatedImages = await client.fetch(
-      `*[_type == "food" && "${datas.tags[0]}" in tags][0...3]{
+      `*[_type == "food" && "${datas.tags}" in tags][0...3]{
         "url": image.asset->url
       }`
     );
     return (
       <div>
-      <Header title="Shop Detail" text="Shop"/>
+      <Header />
       <div className="mt-[100px] mb-[20px]  container px-1 mx-auto">
         {datas ? (
           <section className="text-gray-600 body-font overflow-hidden">
@@ -54,7 +54,7 @@ const Page = async ({ params }: { params: { id: string } }) => {
     </div>
     </div>
       <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-        <button className="text-sm title-font rounded-sm p-1 text-whitetext bg-bordercoloryello tracking-widest">
+        <button className="text-sm title-font rounded-sm p-1 text-white bg-[#ff9f0d] tracking-widest">
         {datas.available==true?"In Stock":"Out of Stock"}
         </button>
         <h1 className="text-gray-900 text-3xl title-font mb-1 pb-4 pt-1 font-bold">
@@ -65,7 +65,7 @@ const Page = async ({ params }: { params: { id: string } }) => {
         </p>
         <div className="flex flex-col gap-1 mt-6 items-start pb-5 border-b-2 border-gray-100 mb-5">
         <div className='flex justify-between gap-6'>
-          <p className='text-[20px] text-bordercoloryello font-bold'>${datas.originalPrice}</p> 
+          <p className='text-[20px] text-[#ff9f0d] font-bold'>${datas.originalPrice}</p> 
          <div className='flex gap-1'>
          <p className="line-through text-[20px] font-semibold text-red-600">${datas.price}</p>
 {datas.originalPrice > datas.price && (
@@ -75,7 +75,7 @@ const Page = async ({ params }: { params: { id: string } }) => {
 )}</div>
           </div>
            <div className='flex gap-5 text-[13px]'>
-           <h1 className='text-bordercoloryello flex'> <IoIosStar /> <IoIosStar/> <IoIosStar/> <IoIosStar/> <IoIosStar/></h1>
+           <h1 className='text-[#ff9f0d] flex'> <IoIosStar /> <IoIosStar/> <IoIosStar/> <IoIosStar/> <IoIosStar/></h1>
            <div className='border-b font-semibold tracking-tight transition-colors first:mt-0 pt-[20px] scroll-m-20 '/>
            <h1 className='leading-[16px]'>{datas.rating} Rating</h1>
            <div className='border-b font-semibold tracking-tight transition-colors first:mt-0 pt-[20px] scroll-m-20 '/>
@@ -122,7 +122,7 @@ const Page = async ({ params }: { params: { id: string } }) => {
         return(
           <div key={datashop.id} className="mt-[0px] mb-[100px] lg:w-4/5  px-12 mx-auto">
        <div className="flex gap-10">
-         <button className="bg-bordercoloryello text-whitetext p-2 ">Description</button><button>Reviews (22)</button>
+         <button className="bg-[#ff9f0d] text-white p-2 ">Description</button><button>Reviews (22)</button>
        </div>
        <div className="flex flex-col gap-4 text-[14px]">
        <p>{datashop.description}</p>

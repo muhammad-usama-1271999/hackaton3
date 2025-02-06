@@ -62,20 +62,20 @@ import main from "../../../public/ourmenumai.png"
 const Ourmenu = () => {
   return (
     <div className="mt-[100px]">
-      <h1 className="text-center text-bordercoloryello font-greatVibes text-[24px] md:text-[32px] lg:text-[40px] leading-[30px] md:leading-[40px] font-medium">
+      <h1 className="text-center text-[#ff9f0d] font-greatVibes text-[24px] md:text-[32px] lg:text-[40px] leading-[30px] md:leading-[40px] font-medium">
         Choose & pick
       </h1>
-      <h1 className="font-helvetica text-center font-bold text-[30px] md:text-[40px] lg:text-[50px] leading-[35px] md:leading-[45px] text-whitetext">
-        <span className="text-bordercoloryello">Fr</span>om Our Menu
+      <h1 className="font-helvetica text-center font-bold text-[30px] md:text-[40px] lg:text-[50px] leading-[35px] md:leading-[45px] text-white">
+        <span className="text-[#ff9f0d]">Fr</span>om Our Menu
       </h1>
-      <ul className="flex flex-wrap justify-center text-whitetext gap-[10px] md:gap-[30px] lg:gap-[50px] mt-[10px] md:mt-[20px]">
-        <li className="text-[12px] md:text-[14px] lg:text-[15px] text-whitetext hover:text-bordercoloryello text-bold cursor-pointer leading-[28px]">Breakfast</li>
-        <li className="text-[12px] md:text-[14px] lg:text-[15px] text-whitetext hover:text-bordercoloryello text-bold cursor-pointer leading-[28px]">Lunch</li>
-        <li className="text-[12px] md:text-[14px] lg:text-[15px] text-whitetext hover:text-bordercoloryello text-bold cursor-pointer leading-[28px]"> Dinner</li>
-        <li className="text-[12px] md:text-[14px] lg:text-[15px] text-whitetext hover:text-bordercoloryello text-bold cursor-pointer leading-[28px]"> Desert </li>
-        <li className="text-[12px] md:text-[14px] lg:text-[15px] text-whitetext hover:text-bordercoloryello text-bold cursor-pointer leading-[28px]"> Drink</li>
-        <li className="text-[12px] md:text-[14px] lg:text-[15px] text-whitetext hover:text-bordercoloryello text-bold cursor-pointer leading-[28px]">Snack</li>
-        <li className="text-[12px] md:text-[14px] lg:text-[15px] text-whitetext hover:text-bordercoloryello text-bold cursor-pointer leading-[28px]">Soups</li>
+      <ul className="flex flex-wrap justify-center text-white gap-5 md:gap-7 lg:gap-10 mt-3 md:mt-5">
+        <li className="text-xs md:text-sm lg:text-base text-white hover:text-[#ff9f0d] cursor-pointer ">Breakfast</li>
+        <li className="text-xs md:text-sm lg:text-base text-white hover:text-[#ff9f0d] cursor-pointer ">Lunch</li>
+        <li className="text-xs md:text-sm lg:text-base text-white hover:text-[#ff9f0d] cursor-pointer "> Dinner</li>
+        <li className="text-xs md:text-sm lg:text-base text-white hover:text-[#ff9f0d] cursor-pointer "> Desert </li>
+        <li className="text-xs md:text-sm lg:text-base text-white hover:text-[#ff9f0d] cursor-pointer "> Drink</li>
+        <li className="text-xs md:text-sm lg:text-base text-white hover:text-[#ff9f0d] cursor-pointer ">Snack</li>
+        <li className="text-xs md:text-sm lg:text-base text-white hover:text-[#ff9f0d] cursor-pointer ">Soups</li>
       </ul>
       <div className="flex flex-col lg:flex-row px-[20px] md:px-[50px] lg:px-[100px] py-[20px] md:py-[50px] gap-[10px] md:gap-[15px] lg:gap-[20px]">
         <div className="flex justify-center">
@@ -94,13 +94,13 @@ const Ourmenu = () => {
                   />
                 </div>
                 <div>
-                  <h1 className="text-[14px] md:text-[18px] lg:text-[20px] leading-[22px] md:leading-[26px] lg:leading-[28px] font-bold text-whitetext">
+                  <h1 className="text-[14px] md:text-[18px] lg:text-[20px] leading-[22px] md:leading-[26px] lg:leading-[28px] font-bold text-white">
                     {items.title}
                   </h1>
-                  <p className="text-[12px] md:text-[14px] lg:text-[16px] leading-[18px] md:leading-[22px] lg:leading-[24px] text-whitetext">
+                  <p className="text-[12px] md:text-[14px] lg:text-[16px] leading-[18px] md:leading-[22px] lg:leading-[24px] text-white">
                     {items.para}
                   </p>
-                  <h1 className="text-[14px] md:text-[16px] lg:text-[18px] font-bold leading-[20px] md:leading-[26px] lg:leading-[28px] text-bordercoloryello">
+                  <h1 className="text-[14px] md:text-[16px] lg:text-[18px] font-bold leading-[20px] md:leading-[26px] lg:leading-[28px] text-[#ff9f0d]">
                     {items.price}
                   </h1>
                 </div>

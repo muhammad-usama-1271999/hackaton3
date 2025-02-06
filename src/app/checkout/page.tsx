@@ -92,22 +92,6 @@ const handleSubmit =async (event:React.FormEvent<HTMLFormElement>) => {
     const storedCart = JSON.parse(localStorage.getItem("cart") || "[]");
     setCartItems(storedCart);
   }, []);
-
-//   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
-//     setUserDetails({ ...userDetails, [e.target.id]: e.target.value });
-//   };
-
-  // const handleFormSubmit = (e: React.FormEvent) => {
-  //   e.preventDefault();
-
-  //   // Generate a random user ID
-  //   const userId = `USER-${Math.floor(1000 + Math.random() * 9000)}`;
-  //   setGeneratedUserId(userId);
-
-  //   // Show popup
-  //   setShowPopup(true);
-  // };
-
   const calculateTotal = () => {
     return cartItems
       .reduce((acc, item) => acc + item.price * item.quantity, 0)
@@ -116,7 +100,7 @@ const handleSubmit =async (event:React.FormEvent<HTMLFormElement>) => {
 
   return (
     <div>
-      <Header text="checkout" title="Check Out" />
+      <Header  />
       <div className="grid gap-8 lg:grid-cols-2 container py-8 lg:px-[180px] lg:mx-[40px] px-9 my-[50px]">
         
         <form onSubmit={handleSubmit} className="space-y-6">

@@ -64,7 +64,7 @@ const Page = () => {
 
   return (
     <div className="mb-[100px]">
-      <Header title='Shopping Cart' text='Cart'/>
+      <Header />
        <div className="mt-12 px-4 md:px-[150px] lg:block hidden">
   <ul className="flex flex-col md:flex-row justify-between font-bold text-lg text-gray-800 border-b pb-4  ">
     <li className="w-full md:w-2/5 mb-4 md:mb-0">Product</li>
@@ -142,7 +142,7 @@ const Page = () => {
      </div>
      <button className="mt-4 w-full flex justify-center bg-yellow-500 text-white py-2 rounded-md hover:bg-yellow-600">
        <Link href={"/checkout"} className='flex'>
-         Proceed to Checkout<PiCheckSquareOffsetBold className="text-whitetext" />
+         Proceed to Checkout<PiCheckSquareOffsetBold className="text-white" />
        </Link>
      </button>
    </div>

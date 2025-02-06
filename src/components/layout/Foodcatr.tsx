@@ -44,15 +44,18 @@ export default function Foodcatr() {
     fetchData();
   }, []);
 
+  let uniqueCategories:FoodItem[]=[];
+
   // Filter unique categories
-  const uniqueCategories = foodItems.filter(
+  if(foodItems ){
+    uniqueCategories = foodItems.filter(
     (item, index, self) =>
       index ===
       self.findIndex(
         (t) => t.category.trim().toLowerCase() === item.category.trim().toLowerCase()
       )
   );
-
+  }
   return (
     <div className="lg:mt-[100px] lg:px-[100px] px-6 w-full max-w-[1200px] mx-auto text-center">
       <h1 className="text-[#ff9f0d] font-greatVibes lg:text-[32px] text-[30px] leading-[40px] font-medium">

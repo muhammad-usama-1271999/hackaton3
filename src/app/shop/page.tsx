@@ -93,7 +93,7 @@ const ShopPage = () => {
   );
   return (
     <div>
-      <Header text="Shop" title="Our Shop" />
+      <Header  />
       <div className="lg:mt-[50px] lg:mb-[50px] px:6 lg:px-[120px]">
         {loading ? (
           <div className="text-center text-lg font-semibold">
@@ -177,7 +177,7 @@ const ShopPage = () => {
                           </h2>
                           <p className="line-clamp-1">{items.description}</p>
                           <div className="flex py-2 justify-between px-[15px]">
-                            <p className="text-[17px] text-bordercoloryello font-bold">
+                            <p className="text-[17px] text-[#ff9f0d] font-bold">
                               ${items.originalPrice}
                             </p>
                             <div className="flex gap-2">
@@ -199,7 +199,7 @@ const ShopPage = () => {
                           <div className=" justify-between items-center">
                             <div className="flex justify-between">
                               <Link href={`/shop/${items._id}`}>
-                                <button className="bg-bordercoloryello text-whitetext p-1">
+                                <button className="bg-[#ff9f0d] text-white p-1">
                                   View Product
                                 </button>
                               </Link>

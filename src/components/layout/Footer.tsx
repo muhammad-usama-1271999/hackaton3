@@ -12,11 +12,11 @@ import { FaPinterest } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-black">
-        <div className="flex flex-col md:flex-row justify-between items-center px-[135px] py-[50px]">
-          <div className="text-white md:w-[50%] w-[100%]">
-              <h2 className="text-[20px] md:text-[32px] font-semibold"><span className="text-[#FF9F0D]">St</span>ill Need Our Support</h2>
-              <p className="text-[10px] md:text-[16px] font-normal mt-[17px]">Don&#39;t wait make a smart & logical quote here. Its pretty easy.</p>
+    <footer className="bg-black ">
+        <div className="flex flex-col md:flex-row justify-between items-center px-5">
+          <div className="text-white  text-center">
+              <h2 className="text-xl md:text-3xl font-semibold"><span className="text-[#FF9F0D]">St</span>ill Need Our Support</h2>
+              <p className="text-xs md:text-base font-normal mt-[17px]">Don{"'"}t wait make a smart & logical quote here. Its pretty easy.</p>
           </div>
 
           <div className="flex md:mt-0 mt-[20px]">
@@ -26,16 +26,16 @@ const Footer = () => {
             <button className="text-[#FF9F0D] bg-white py-[5px] md:py-[10px] px-[10px] md:px-[20px]">Subscribe Now</button>
           </div>
         </div>
-          <hr className="my-4 border-[#FF9F0D] mx-[135px]" />
+          <hr className="my-4 border-[#FF9F0D] mx-5" />
       <div className="mx-auto w-full max-w-screen-xl ">
-        <div className="grid grid-cols-2  md:gap-[50px] gap-1 px-6 md:px-[135px] py-6 lg:py-8 md:grid-cols-4">
-          <div>
-            <h2 className="mb-6 text-[24px] font-semibold  uppercase  text-whitetext">
+        <div className="md:flex flex-wrap justify-center  md:gap-[50px] gap-1 px-6 md:px-[135px] py-6 lg:py-8">
+          <div className="mt-10 md:mt-0">
+            <h2 className="mb-6 text-[24px] font-semibold  uppercase  text-[#ff9f0d]">
               About Us
             </h2>
             <ul className="text-gray-500  font-medium">
               <li className="mb-4">
-                <p className="text-[#FFFFFF] text-[16px] font-normal hover:underline">
+                <p className="text-[#FFFFFF] text-[16px] font-normal hover:underline md:w-40 lg:w-60">
                   orporate clients and leisure travelers has been relying on
                   Groundlink for dependab safe, and professional chauffeured car
                   service in major cities across World.
@@ -60,11 +60,11 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="">
-            <h2 className="mb-6 text-[24px] font-semibold  uppercase text-whitetext">
+          <div className="mt-10 md:mt-0">
+            <h2 className="mb-6 text-[24px] font-semibold  uppercase text-[#ff9f0d]">
             Useful Links
             </h2>
-            <ul className="text-gray-500 dark:text-gray-400 font-medium">
+            <ul className="text-gray-500 dark:text-gray-300 font-medium">
               <li className="mb-4">
                 <a href="#" className="hover:underline">
                   About
@@ -100,10 +100,10 @@ const Footer = () => {
             </ul>
           </div>
           <div className="mt-10 md:mt-0">
-            <h2 className="mb-6 text-[24px] font-semibold  uppercase text-whitetext">
+            <h2 className="mb-6 text-[24px] font-semibold  uppercase text-[#ff9f0d]">
             Help?
             </h2>
-            <ul className="text-gray-500 dark:text-gray-400 font-medium">
+            <ul className="text-gray-500 dark:text-gray-300 font-medium">
               <li className="mb-4">
                 <a href="#" className="hover:underline">
                   FAQ
@@ -139,7 +139,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className="mt-10 md:mt-0">
-            <h2 className="mb-6 text-[24px] font-semibold  uppercase text-whitetext">
+            <h2 className="mb-6 text-[24px] font-semibold  uppercase text-white">
               Recent Post
             </h2>
             <ul className="text-gray-500 dark:text-gray-400 font-medium gap-[14px]">
@@ -184,36 +184,18 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        
-        {/* <div className=" px-4 py-6 bg-bordercoloryello w-full  md:flex md:items-center md:justify-between">
-          <span className="text-sm text-gray-500 dark:text-gray-300 sm:text-center">
-            © 2023 <a href="https://flowbite.com/">Flowbite™</a>. All Rights
-            Reserved.
-          </span>
-
-          <div className="flex justify-center gap-[14px] ">
-            <div className="bg-white w-[36px] h-[34px] flex justify-center items-center rounded"><a href="https://www.facebook.com/profile.php?id=61554662968933&mibextid=ZbWKwL"><FaFacebookF /></a></div>
-            <div className="bg-white w-[36px] h-[34px] flex justify-center items-center rounded"><FaTwitter /></div>
-            <div className="bg-white w-[36px] h-[34px] flex justify-center items-center rounded"><a href="https://instagram.com/ghaniya08">< FaInstagram/></a></div>
-            <div className="bg-white w-[36px] h-[34px] flex justify-center items-center rounded"><FaYoutube /></div>
-            <div className="bg-white w-[36px] h-[34px] flex justify-center items-center rounded"><FaPinterest /></div>
-          </div>
-         
-        </div> */}
       </div>
-
-      <div className=" px-4 py-6 bg-bordercoloryello w-full  md:flex md:items-center md:justify-between">
-          <span className="text-sm text-gray-500 dark:text-gray-300 sm:text-center">
-            © 2023 <a href="https://flowbite.com/">Flowbite™</a>. All Rights
-            Reserved.
+      <div className="px-3 py-6 bg-gray-500 w-full  md:flex md:items-center gap-3 md:justify-around">
+          <span className="text-sm text-white dark:text-gray-300 sm:text-center">
+          Copyright © 2022 by <i className="lg:text-[22px] text-xs text-[#FF9F0D]">USAMA</i>. All Rights Reserved.
           </span>
 
           <div className="flex justify-center gap-[14px] ">
-            <div className="bg-white w-[36px] h-[34px] flex justify-center items-center rounded"><a href="https://www.facebook.com/profile.php?id=61554662968933&mibextid=ZbWKwL"><FaFacebookF /></a></div>
-            <div className="bg-white w-[36px] h-[34px] flex justify-center items-center rounded"><FaTwitter /></div>
-            <div className="bg-white w-[36px] h-[34px] flex justify-center items-center rounded"><a href="https://instagram.com/ghaniya08">< FaInstagram/></a></div>
-            <div className="bg-white w-[36px] h-[34px] flex justify-center items-center rounded"><FaYoutube /></div>
-            <div className="bg-white w-[36px] h-[34px] flex justify-center items-center rounded"><FaPinterest /></div>
+            <div className="bg-white w-[36px] h-[34px] flex justify-center items-center rounded"><a href="#"><FaFacebookF /></a></div>
+            <div className="bg-white w-[36px] h-[34px] flex justify-center items-center rounded"><a href="#"><FaTwitter /></a></div>
+            <div className="bg-white w-[36px] h-[34px] flex justify-center items-center rounded"><a href="#">< FaInstagram/></a></div>
+            <div className="bg-white w-[36px] h-[34px] flex justify-center items-center rounded"><a href="#"><FaYoutube /></a></div>
+            <div className="bg-white w-[36px] h-[34px] flex justify-center items-center rounded"><a href="#"><FaPinterest /></a></div>
           </div>
          
         </div>

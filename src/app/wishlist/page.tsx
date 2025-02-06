@@ -30,7 +30,7 @@ const WishlistPage = () => {
   };
 return (
   <div>
-    <Header title="WishList" text="Wishlist" />
+    <Header  />
     <div className="p-6">
       <div className="flex flex-col items-center">
         <h2 className="text-2xl font-bold mb-6">Your Wishlist</h2>

@@ -31,7 +31,7 @@ const Faq = () => {
 
   return (
     <div className="bg-gray-100 mb-[50px]">
-        <Header  text='faqs' title='FAQ Page'/>
+        <Header />
       <div className="max-w-4xl mx-auto text-center pt-10">
         <h1 className="text-3xl font-bold mb-4">Questions Looks Here</h1>
         <p className="text-gray-600 mb-10">

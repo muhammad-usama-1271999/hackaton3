@@ -1,209 +1,108 @@
+
 "use client";
+import { useState } from "react";
+import {
+  FaSearch,
+  FaUser,
+  FaBars,
+  FaTimes,
+  FaShoppingCart,
+} from "react-icons/fa";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
-import { IoSearch } from "react-icons/io5";
-import { PiUserBold } from "react-icons/pi";
-import { HiOutlineShoppingBag } from "react-icons/hi2";
-import { FaRegHeart } from "react-icons/fa";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { GiHamburgerMenu } from "react-icons/gi";
-import { client } from "@/sanity/lib/client";
 
-// Define types
-interface HeaderProps {
-  text: string;
-  title: string;
-}
+const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
 
-interface CartItem {
-  id: string;
-  name: string;
-  quantity: number;
-}
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
 
-interface WishlistItem {
-  id: string;
-  name: string;
-}
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
 
-interface Product {
-  _id: string;
-  name: string;
-  category: string;
-  price: number;
-  originalPrice: number;
-  image: string;
-  description: string;
-  available: boolean;
-  tags: string[];
-}
-
-const Header: React.FC<HeaderProps> = ({  }) => {
-  const [cart, setCart] = useState<CartItem[]>([]);
-  const [wishlist, setWishlist] = useState<WishlistItem[]>([]);
-  const [searchQuery, setSearchQuery] = useState<string>("");
-  const [products, setProducts] = useState<Product[]>([]);
-
-  useEffect(() => {
-    const cartItems: CartItem[] = JSON.parse(localStorage.getItem("cart") || "[]");
-    setCart(cartItems);
-
-    const wishlistItems: WishlistItem[] = JSON.parse(localStorage.getItem("wishlist") || "[]");
-    setWishlist(wishlistItems);
-
-    // Fetch products from Sanity
-    const fetchProducts = async () => {
-      const data: Product[] = await client.fetch(
-        `*[_type == "food"]{
-          _id,
-          name,
-          category,
-          price,
-          originalPrice,
-          image,
-          description,
-          available,
-          tags
-        }`
-      );
-      setProducts(data);
-    };
-    fetchProducts();
-  }, []);
-
-  useEffect(() => {
-    const handleStorageChange = () => {
-      const updatedCart: CartItem[] = JSON.parse(localStorage.getItem("cart") || "[]");
-      setCart(updatedCart);
-
-      const updatedWishlist: WishlistItem[] = JSON.parse(localStorage.getItem("wishlist") || "[]");
-      setWishlist(updatedWishlist);
-    };
-
-    window.addEventListener("storage", handleStorageChange);
-    return () => {
-      window.removeEventListener("storage", handleStorageChange);
-    };
-  }, []);
-
-  const filteredProducts = products.filter((product) =>
-    product.name.toLowerCase().includes(searchQuery.toLowerCase())
-  );
+  const navItems = [
+    { name: "Home", path: "/" },
+    { name: "Our Menu", path: "/ourmenu" },
+    { name: "About Us", path: "/aboutus" },
+    { name: "Shop", path: "/shop" },
+    { name: "Our Chef", path: "/ourchef" },
+  ];
 
   return (
-    <div>
-      <header className="bg-black text-white">
-        <div className="container mx-auto flex justify-between items-center py-4 px-6">
-          <h1 className="text-2xl font-bold text-yellow-500 lg:block hidden">FoodTuck</h1>
-          <nav className="lg:block hidden">
-            <ul className="flex space-x-6">
-              <li><Link href="/">Home</Link></li>
-              <li><Link href="/ourmenu">Menu</Link></li>
-              <li><Link href="/blog">Blog</Link></li>
-              <li><Link href="/ourchef">Chef</Link></li>
-              <li><Link href="/aboutus">About</Link></li>
-              <li><Link href="/shop">Shop</Link></li>
-              <li><Link href="/faq">FAQs</Link></li>
-              <Link href="/user"><PiUserBold className="text-white text-[24px] cursor-pointer" /></Link>
-
-              {/* Shopping Cart Icon with Count */}
-              <Link href="/shoppingcart">
-                <div className="relative">
-                  <HiOutlineShoppingBag className="text-white text-[24px] cursor-pointer" />
-                  {cart.length > 0 && (
-                    <span className="absolute -top-2 -right-2 bg-[#ff9f0d] text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
-                      {cart.reduce((total, item) => total + item.quantity, 0)}
-                    </span>
-                  )}
-                </div>
-              </Link>
-
-              {/* Wishlist Icon with Count */}
-              <Link href="/wishlist">
-                <div className="relative">
-                  <FaRegHeart className="text-white text-[24px] cursor-pointer" />
-                  {wishlist.length > 0 && (
-                    <span className="absolute -top-2 -right-2 bg-[#ff9f0d] text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
-                      {wishlist.length}
-                    </span>
-                  )}
-                </div>
-              </Link>
-              
-              {/* Search Bar */}
-              <div className="flex gap-4">
-                <div>
-                  <div className="flex items-center gap-[10px] px-[15px] py-[5px] border border-[#ff9f0d] rounded-2xl">
-                    <input
-                      type="text"
-                      placeholder="Search..."
-                      value={searchQuery}
-                      onChange={(e) => setSearchQuery(e.target.value)}
-                      className="bg-transparent outline-none text-white text-[14px] placeholder:text-white w-full"
-                    />
-                    <IoSearch className="text-white w-[20px] h-[20px]" />
-                  </div>
-                  {searchQuery && filteredProducts.length > 0 && (
-                    <div className="absolute bg-white w-[240px] mt-1 border border-gray-300 rounded-md shadow-lg z-10">
-                      <ul>
-                        {filteredProducts.map((product) => (
-                          <li key={product._id} className="px-4 py-2 text-black hover:bg-gray-200 cursor-pointer">
-                            <Link href={`/shop/${product._id}`}>{product.name}</Link>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
-                </div>
-              </div>
-            </ul>
-          </nav>
-
-          {/* Mobile Menu */}
-          <div className="lg:hidden block">
-            <Sheet>
-              <SheetTrigger>
-                <GiHamburgerMenu className="text-white text-[15px] cursor-pointer" />
-              </SheetTrigger>
-              <SheetContent>
-                <ul className="flex flex-col gap-[10px] font-medium text-[16px] text-black">
-                  <li><Link href="/">Home</Link></li>
-                  <li><Link href="/ourmenu">Menu</Link></li>
-                  <li><Link href="/blog">Blog</Link></li>
-                  <li><Link href="/ourchef">Chef</Link></li>
-                  <li><Link href="/aboutus">About</Link></li>
-                  <li><Link href="/shop">Shop</Link></li>
-                  <li><Link href="/user">Profile</Link></li>
-                </ul>
-                <div className="flex gap-7">
-                  <Link href="/shoppingcart">
-                    <div className="relative">
-                      <HiOutlineShoppingBag className="text-[#ff9f0d] text-[24px] cursor-pointer" />
-                      {cart.length > 0 && (
-                        <span className="absolute -top-2 -right-2 bg-[#ff9f0d] text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
-                          {cart.reduce((total, item) => total + item.quantity, 0)}
-                        </span>
-                      )}
-                    </div>
-                  </Link>
-                  <Link href="/wishlist">
-                    <div className="relative">
-                      <FaRegHeart className="text-[#ff9f0d] text-[24px] cursor-pointer" />
-                      {wishlist.length > 0 && (
-                        <span className="absolute -top-2 -right-2 bg-[#ff9f0d] text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
-                          {wishlist.length}
-                        </span>
-                      )}
-                    </div>
-                  </Link>
-                </div>
-              </SheetContent>
-            </Sheet>
-          </div>
+    <header className="bg-black text-white">
+      <div className="flex justify-between items-center px-6 py-4 md:px-10">
+        <div className="font-bold text-xl">
+          <Link href="/">
+            <span className="text-white">Food</span>
+            <span className="text-[#FF9F0D]">tuck</span>
+          </Link>
         </div>
-      </header>
-    </div>
+
+        <nav className="hidden md:flex space-x-5">
+          {navItems.map((item) => (
+            <Link
+              key={item.path}
+              href={item.path}
+              className="hover:text-[#FF9F0D] hover:underline transform transition duration-200 ease-in-out hover:scale-105 cursor-pointer"
+            >
+              {item.name}
+            </Link>
+          ))}
+        </nav>
+
+        <div className="flex items-center space-x-4">
+          <div className="relative hidden md:block">
+            <input
+              type="text"
+              placeholder="Search..."
+              className="pl-4 pr-10 py-2 rounded-full bg-black border border-[#FF9F0D] text-white focus:outline-none transition duration-200 ease-in-out focus:ring-2 focus:ring-[#FF9F0D]"
+            />
+            <FaSearch className="absolute right-3 top-1/2 transform -translate-y-1/2 text-white cursor-pointer" />
+          </div>
+          <Link href="/shoppingcart">
+            <FaShoppingCart className="cursor-pointer hover:text-[#FF9F0D] transition duration-200 ease-in-out" />
+          </Link>
+          <Link href="/user">
+            <FaUser className="cursor-pointer hover:text-[#FF9F0D] transition duration-200 ease-in-out" />
+          </Link>
+          <button
+            onClick={toggleMenu}
+            className="md:hidden focus:outline-none transition duration-200 ease-in-out"
+          >
+            {isOpen ? (
+              <FaTimes className="text-xl" />
+            ) : (
+              <FaBars className="text-xl" />
+            )}
+          </button>
+        </div>
+      </div>
+
+      <div
+        className={`md:hidden bg-black py-4 grid grid-cols-3 gap-4 place-items-center transition-all duration-300 ease-in-out transform ${isOpen ? "scale-y-100" : "scale-y-0 overflow-hidden"}`}
+      >
+        {navItems.map((item) => (
+          <Link
+            key={item.path}
+            href={item.path}
+            className="text-white hover:text-[#FF9F0D] transition duration-200 ease-in-out"
+            onClick={closeMenu}
+          >
+            {item.name}
+          </Link>
+        ))}
+        <Link
+          href="/faq"
+          className="text-white hover:text-[#FF9F0D] transition duration-200 ease-in-out"
+          onClick={closeMenu}
+        >
+          FAQ
+        </Link>
+      </div>
+    </header>
   );
 };
+
 
 export default Header;

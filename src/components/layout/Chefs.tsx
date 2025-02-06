@@ -8,9 +8,9 @@ const Chefs = () => {
   return (
     <div>
        <div className='lg:mt-[100px] lg:px-[100px] px-6'>
-    <h1 className='text-bordercoloryello text-center font-greatVibes lg:text-[32px] text-[30px] leading-[40px] font-medium'>Our chefs</h1>
-    <h1 className='font-helvetica  font-bold text-center lg:text-[40px] text-[30px] leading-[45px] text-whitetext'><span className='text-bordercoloryello'>Ch</span>oose Food Iteam</h1>
-    <div className='flex lg:flex-row flex-col gap-3 px-[100px] pt-[30px]'>
+    <h1 className='text-[#ff9f0d] text-center lg:text-3xl text-xl font-medium'>Our chefs</h1>
+    <h1 className='font-helvetica  font-bold text-center lg:text-5xl text-3xl text-white'><span className='text-[#ff9f0d]'>Ch</span>oose Food Iteam</h1>
+    <div className='flex flex-wrap justify-center gap-3 px-10 pt-[30px]'>
     <Image src={chefs1} alt="category" className='lg:w-[305px] lg:h-[248px] rounded-[6px]' />
     <Image src={chefs2} alt="category" className='lg:w-[305px] lg:h-[248px] rounded-[6px]'/>
     <Image src={chefs3} alt="category" className='lg:w-[305px] lg:h-[248px] rounded-[6px]'/>

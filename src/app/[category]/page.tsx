@@ -31,7 +31,7 @@ const page =async ({ params }: { params: { category : string } }) => {
       }`)
   return (
     <div className='mb-[50px]'>
-        <Header text='Categorys' title={params.category}/>
+        <Header />
         <h1 className='font-extrabold p-[10px] mt-[30px] text-[40px] text-yellow-600 font-greatVibes flex justify-center '>{params.category}s</h1>
    <div className='px-14 flex gap-[20px]'>
    {datas.map((items)=>{
@@ -57,7 +57,7 @@ const page =async ({ params }: { params: { category : string } }) => {
           </h2>
           <p className='line-clamp-1'>{items.description}</p>
           <div className='flex py-2 justify-between px-[15px]'>
-          <p className='text-[17px] text-bordercoloryello font-bold'>${items.originalPrice}</p> 
+          <p className='text-[17px] text-[#ff9f0d] font-bold'>${items.originalPrice}</p> 
          <div className='flex gap-2'>
          <p className="line-through font-semibold text-red-600">${items.price}</p>
 {items.originalPrice > items.price && (
@@ -66,7 +66,7 @@ const page =async ({ params }: { params: { category : string } }) => {
   </p>
 )}</div>
           </div>
-          <Link href={`/shop/${items._id}`}><button className='bg-bordercoloryello text-whitetext p-2'>View Product</button></Link>
+          <Link href={`/shop/${items._id}`}><button className='bg-[#ff9f0d] text-white p-2'>View Product</button></Link>
         </div>
       </div>
     )})}

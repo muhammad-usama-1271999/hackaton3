@@ -94,7 +94,7 @@ const Nav = () => {
   return (
     <div className="w-full flex flex-col lg:px-[100px] px-[20px] lg:py-[20px] py-[10px]">
       
-      <div className=" text-[#FF9F0D] text-5xl font-bold text-center">
+      <div className=" text-[#FF9F0D] text-3xl lg:text-5xl font-bold text-center">
         Fo<span className="text-[#ffffff]">odTuck</span>
       
       </div>
@@ -105,7 +105,7 @@ const Nav = () => {
               Home
             </li>
           </Link>
-          <Link href={"/menu"}>
+          <Link href={"/ourmenu"}>
             <li className="w-[45px] h-[24px] font-medium leading-[24px] ">
               Menu
             </li>
@@ -115,12 +115,12 @@ const Nav = () => {
               Blog
             </li>
           </Link>
-          <Link href={"/chef"}>
+          <Link href={"/ourchef"}>
             <li className="w-[45px] h-[24px] font-medium leading-[24px] ">
               Chef
             </li>
           </Link>
-          <Link href={"/about-us"}>
+          <Link href={"/aboutus"}>
             <li className="w-[45px] h-[24px] font-medium leading-[24px] ">
               About
             </li>
@@ -130,7 +130,7 @@ const Nav = () => {
               Shop
             </li>
           </Link>
-          <Link href={"/signIn"}>
+          <Link href={"/signin"}>
             <li className="w-[45px] h-[24px] font-medium leading-[24px] ">
               SignIn
             </li>
@@ -210,11 +210,7 @@ const Nav = () => {
               )}
             </div>
           </div>
-          <div className="">
-            <h1 className=" text-[#FF9F0D] text-xl font-bold  text-center">
-              Fo<span className="text-[#ffffff]">odTuck</span>
-            </h1>
-          </div>
+          
           <Sheet>
             <SheetTrigger>
               <GiHamburgerMenu className="text-white text-[15px] cursor-pointer" />
@@ -270,8 +266,8 @@ const Nav = () => {
               </div>
             </SheetContent>
           </Sheet>
-        </div>
       </div>
+        </div>
     </div>
   );
 };

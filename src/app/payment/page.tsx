@@ -16,7 +16,7 @@ export default function PaymentForm() {
 
   return (
     <div>
-        <Header text='Payment' title='Payment'/>
+        <Header />
          <div className="text-center mt-10 mb-10">
     </div>
             <div className="max-w-lg mx-auto p-8  mb-10 shadow-2xl">
@@ -25,21 +25,21 @@ export default function PaymentForm() {
         <label className="block mb-2 text-sm font-semibold text-myverydarkpink">Name</label>
         <input
           type="text"
-          className="w-full p-2 mb-4 rounded border text-myverydarkpink border-bordercoloryello focus:border-bordercoloryello"
+          className="w-full p-2 mb-4 rounded border text-myverydarkpink border-[#ff9f0d] focus:border-[#ff9f0d]"
           placeholder="Enter Your Name"
           required
         />
         <label className="block mb-2 text-sm font-semibold text-myverydarkpink">Eamil</label>
         <input
           type="email"
-          className="w-full p-2 mb-4 rounded border text-myverydarkpink border-bordercoloryello focus:border-bordercoloryello"
+          className="w-full p-2 mb-4 rounded border text-myverydarkpink border-[#ff9f0d] focus:border-[#ff9f0d]"
           placeholder="Enter Your Email Address"
           required
         />
         {/* Payment Method */}
         <label className="block mb-2 text-sm font-semibold text-myverydarkpink">Payment Method</label>
         <select
-          className="w-full p-2 mb-4 rounded border border-bordercoloryello focus:border-bordercoloryello text-myverydarkpink"
+          className="w-full p-2 mb-4 rounded border border-[#ff9f0d] focus:border-[#ff9f0d] text-myverydarkpink"
           value={paymentMethod}
           onChange={(e) => setPaymentMethod(e.target.value)}
           required
@@ -53,7 +53,7 @@ export default function PaymentForm() {
         <label className="block mb-2 text-sm font-semibold text-myverydarkpink">Card Number</label>
         <input
           type="text"
-          className="w-full p-2 mb-4 rounded border text-myverydarkpink border-bordercoloryello focus:border-bordercoloryello"
+          className="w-full p-2 mb-4 rounded border text-myverydarkpink border-[#ff9f0d] focus:border-[#ff9f0d]"
           placeholder="1234 5678 9012 3456"
           value={cardNumber}
           onChange={(e) => setCardNumber(e.target.value)}
@@ -65,7 +65,7 @@ export default function PaymentForm() {
         <label className="block mb-2 text-sm font-semibold text-myverydarkpink">CVV</label>
         <input
           type="text"
-          className="w-full p-2 mb-4 rounded border text-myverydarkpink border-bordercoloryello focus:border-bordercoloryello "
+          className="w-full p-2 mb-4 rounded border text-myverydarkpink border-[#ff9f0d] focus:border-[#ff9f0d] "
           placeholder="123"
           value={cvv}
           onChange={(e) => setCvv(e.target.value)}
@@ -83,7 +83,7 @@ export default function PaymentForm() {
              <textarea
                id="message"
                name="message" 
-               className="w-full rounded border  border-bordercoloryello focus:border-bordercoloryello text-myverydarkpink h-32 text-base outline-none  py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
+               className="w-full rounded border  border-[#ff9f0d] focus:border-[#ff9f0d] text-myverydarkpink h-32 text-base outline-none  py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
                defaultValue={""}
              />
            </div>
@@ -92,7 +92,7 @@ export default function PaymentForm() {
         {/* Submit Button */}
         <button
           type="submit"
-          className="w-full bg-bordercoloryello text-white p-2 rounded hover:bg-bordercoloryello"
+          className="w-full bg-[#ff9f0d] text-white p-2 rounded hover:bg-[#ff9f0d]"
         >
           Submit Payment
         </button>
